@@ -36,8 +36,9 @@ The `data.json` file in `public/data/` contains an array of grocery items in thi
   "image": "/images/beans.png",
   "type": "vegetables"
 }
+```
 
-Installation
+## Installation
 
 	1.	Clone the repository:
 
@@ -73,7 +74,7 @@ Future Enhancements
 	•	User Authentication: Add login and signup functionality for personalized carts.
 	•	Enhanced Search & Filter: Enable filtering items by type and price range.
 
-License
+## License
 
 This project is open-source and available under the MIT License.
 
