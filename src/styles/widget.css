@@ -1,0 +1,94 @@
+/* Parent container to hold grocery widgets in a grid */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Auto-fit as many items as possible, min width of 200px */
+  gap: 1.5em; /* Space between the boxes */
+  padding: 1em;
+  max-width: 1200px;
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Each grocery widget */
+.grocery-buy-widget {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  border: 1px solid #ddd;
+  padding: 1.5%;
+  border-radius: 40px;
+  background-color: #f9f9f9;
+  width: 100%; /* Fill grid cell */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Add hover effect for better interaction */
+.grocery-buy-widget:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments for tablets */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack the items vertically */
+    align-items: center; /* Center them in the middle */
+  }
+
+  .grocery-widget,
+  .grocery-buy-widget {
+    width: 80%; /* Allow the boxes to take up most of the screen width */
+    max-width: 400px; /* Prevent them from becoming too wide on larger phones */
+  }
+}
+
+/* Responsive adjustments for small screens (mobile) */
+@media (max-width: 480px) {
+  .grocery-widget,
+  .grocery-buy-widget {
+    width: 100%; /* Full width on small devices */
+  }
+
+  .container {
+    padding: 0em; /* Reduce padding on smaller devices */
+  }
+}
+
+/* Image styles */
+.grocery-buy-widget img {
+  width: 100px;
+  height: 100px;
+  object-fit:contain;
+  margin-bottom: 1em;
+  border-radius: 5px;
+}
+
+/* Typography */
+.grocery-buy-widget h3 {
+  color: #4caf50;
+}
+
+.grocery-buy-widget p {
+  color: #2c3e50;
+}
+
+.grocery-buy-widget p:last-child {
+  color: #e67e22;
+}
+
+/* Button styles */
+.grocery-buy-widget button {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 0.5em;
+}
+
+.grocery-buy-widget button:hover {
+  background-color: #388e3c;
+}

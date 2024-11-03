@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
+body {
+    font-family: "Russo One", sans-serif;
+    background-color: #d4e157;
+    color: #333; 
+    -webkit-tap-highlight-color: transparent;
+}
+
+:root {
+    --green: #4caf50;
+    --red: #f44336;
+    --gold: #ffc107; 
+    --gray-dark: #5d4037; 
+    --gray-light: #8d6e63; 
+    --transparent: #00000000;
+    --radius-left: 3rem 0 0 3rem;
+    --radius-right: 0 3rem 3rem 0;
+}
+
+button:hover,
+.class-sub-container a:hover,
+.project-item:hover,
+.skill-item:hover,
+.item:not(.active):hover,
+.sub-container-2:not(.active-subheading):hover,
+.sub-container-3:not(.active-subheading):hover {
+    background-image: linear-gradient(90deg, var(--green), var(--gold) 50%, var(--green));
+}
